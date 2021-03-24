@@ -20,10 +20,11 @@ end
 def copy_files
   directory "app", force: true
   directory "config", force: true
+  copy_file "postcss.config.js", "postcss.config.js"
 end
 
 def add_packages
-  run "yarn add tailwindcss postcss@latest postcss-loader style-loader mini-css-extract-plugin postcss-import@latest autoprefixer@latest @tailwindcss/aspect-ratio css-loader @tailwindcss/forms @tailwindcss/line-clamp @tailwindcss/typography @rails/webpacker"    
+  run "yarn add tailwindcss postcss@latest postcss-loader postcss-flexbugs-fixes postcss-preset-env style-loader mini-css-extract-plugin postcss-import@latest autoprefixer@latest @tailwindcss/aspect-ratio css-loader @tailwindcss/forms @tailwindcss/line-clamp @tailwindcss/typography @rails/webpacker"
 end
 
 # Main setup
