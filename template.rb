@@ -24,7 +24,7 @@ def copy_files
 end
 
 def add_packages
-  run "yarn add tailwindcss postcss@latest postcss-loader postcss-flexbugs-fixes postcss-preset-env style-loader mini-css-extract-plugin postcss-import@latest autoprefixer@latest @tailwindcss/aspect-ratio css-loader @tailwindcss/forms @tailwindcss/line-clamp @tailwindcss/typography @rails/webpacker"
+  run "yarn add tailwindcss postcss@latest postcss-loader postcss-flexbugs-fixes postcss-preset-env style-loader sass sass-loader css-minimizer-webpack-plugin mini-css-extract-plugin postcss-import@latest autoprefixer@latest @tailwindcss/aspect-ratio css-loader @tailwindcss/forms @tailwindcss/line-clamp @tailwindcss/typography @rails/webpacker"
 end
 
 # Main setup

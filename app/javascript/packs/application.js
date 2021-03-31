@@ -14,12 +14,19 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import 'core-js/stable'
-import 'regenerator-runtime/runtime'
-
 import Rails from "@rails/ujs"
 
+// Make accessible for Electron and Mobile adapters
+window.Rails = Rails
+
+// ADD YOUR JAVACSRIPT HERE
+
+// Start Rails UJS
 Rails.start()
 
-
-console.log('Hello World from Webpacker Template')
+// Styles
+// These are imported separately for faster Webpack recompilation
+// https://rubyyagi.com/solve-slow-webpack-compilation/
+import "stylesheets/base.scss"
+import "stylesheets/components.scss"
+import "stylesheets/utilities.scss"
